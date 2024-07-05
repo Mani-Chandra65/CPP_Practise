@@ -8,6 +8,9 @@ struct stud {
     bool elig = false;
 };
 
+void callfun(stud stud);
+void callfun2(stud &stud);
+
 int main() {
     std::cout << "Hello there...\nEnter number of students:\n";
     int num;
@@ -30,6 +33,16 @@ int main() {
             std::cout << "You are eligible!\n";
         }
     }
+    std::cout << "Address accessed directly: " << &students[0]<<std::endl;
+    callfun(students[0]);     //Pass by value
+    callfun2(students[0]);     //Pass by reference
 
     return 0;
+}
+
+void callfun(stud stud){
+    std::cout << "Address in pass by value: "<< &stud<<std::endl;
+}
+void callfun2(stud &stud){
+    std::cout << "Address in pass by reference: "<< &stud <<std::endl;
 }
