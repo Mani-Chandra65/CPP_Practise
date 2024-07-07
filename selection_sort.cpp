@@ -7,16 +7,13 @@
  }
  void selection_sort(int list[],int size){
     for(int i = 0;i<size-1;i++){
-
-    int min = list[0];
-    int k = i;
-        for(int j = i;j<size-1;j++){
-            if(list[j] < min){
-            min = list[j+1];
-            k = j+1;
+    int min = i;
+        for(int j = i+1;j<size;j++){
+            if(list[j] < list[min]){
+            min = j;
             }
         }
-        swap(list[k],list[i]);
+        swap(list[min],list[i]);
     }
  }
 
