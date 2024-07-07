@@ -18,9 +18,15 @@ void bubble_sort(int list[],int size){
 }
 
 int main(){
-    int list[] = {45,65,8,7,54,78,96,35,55,44};
-    int size = sizeof(list)/sizeof(list[0]);
-    bubble_sort(list,size);
+    int n;
+    std::cout << "Enter number of elements less than 10:\n";
+    std::cin >> n;
+    int list[n];
+    std::cout << "Enter the elements of the list:";
+    for(int i = 0; i < n ; i++){
+        std::cin >> list[i];
+    }
+    bubble_sort(list,n);
     for (int val:list){
         std::cout << val << ' ';
     }
