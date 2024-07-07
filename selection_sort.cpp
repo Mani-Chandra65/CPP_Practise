@@ -11,7 +11,7 @@
     int min = list[0];
     int k = i;
         for(int j = i;j<size-1;j++){
-            if(list[j+1] < list[j]){
+            if(list[j] < min){
             min = list[j+1];
             k = j+1;
             }
